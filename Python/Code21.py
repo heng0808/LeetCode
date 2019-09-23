@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.next = None
 
-from .Tool import ListNode
+from Python.Tool.ListNode import ListNode
 
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
@@ -48,7 +48,7 @@ class Solution:
                         l2Node = l2Node.next
             return rootNode
 
-node1 = ListNode.buildNode("124")
-node2 = ListNode.buildNode("134")
+node1 = ListNode("124")
+node2 = ListNode("134")
 node = Solution().mergeTwoLists(node1, node2)
 pass

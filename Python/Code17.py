@@ -10,13 +10,13 @@ class Solution:
             "8": "tuv",
             "9": "wxyz",
         }
-        def word
+
         for i in range(0, len(str) - 1):
             pass
         letters = []
         for char in digits:
             letters.append(digits[char])
         words = []
-        while
+
 
 print(Solution().letterCombinations("23"))
