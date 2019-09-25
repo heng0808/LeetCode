@@ -52,5 +52,5 @@ class Solution:
 #                 lists[idx] = lists[idx].next
 #         return dummy.next
 # Solution().mergeKLists([[1], [1,3,4], [2,6]])
-
-Solution().mergeKLists([ListNode([1]), ListNode([1,3,4]), ListNode([2,6])])
+# Solution().mergeKLists([ListNode([1]), ListNode([1,3,4]), ListNode([2,6])])
+Solution().mergeKLists([ListNode.node([]), ListNode.node([1,3,4]), ListNode.node([2,6])])

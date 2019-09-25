@@ -11,12 +11,17 @@ class Solution:
             "9": "wxyz",
         }
 
-        for i in range(0, len(str) - 1):
-            pass
         letters = []
-        for char in digits:
-            letters.append(digits[char])
-        words = []
+        def nextNumber(letter:str, next:str):
+            if next == None or len(next) == 0:
+                if len(letter) > 0:
+                    letters.append(letter)
+            else:
+                for char in map[next[0]]:
+                    combine = letter + char
+                    nextNumber(combine, next[1:])
 
+        nextNumber("", next=digits)
+        return letters
 
-print(Solution().letterCombinations("23"))
+print(Solution().letterCombinations(""))
