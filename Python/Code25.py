@@ -7,4 +7,19 @@ from Python.Tool.ListNode import ListNode
 
 class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
-        pass
+        while True:
+            isNone = False
+            node = head
+            for i in range(k):
+                if node == None:
+                    isNone = True
+                else:
+                    node = node.next
+                if isNone:
+                    break
+            if isNone:
+                break
+            pass
+
+
+print(str(ListNode.node([1, 2, 3, 4, 5])))
