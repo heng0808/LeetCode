@@ -26,4 +26,4 @@ import Foundation
 // Code4
 //print(Code4().findMedianSortedArrays([3], [-2,-1]))
 // Code25
-print(Code25().reverseKGroup(ListNode.Node([1,2,3,4,5]), 2)!)
+print(Code25().reverseKGroup(ListNode.Node([1,2]), 2)!)
