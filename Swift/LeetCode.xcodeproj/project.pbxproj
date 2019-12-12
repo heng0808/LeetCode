@@ -13,6 +13,7 @@
 		7E6E5886239CF59D003D92D3 /* Code144.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E5885239CF59C003D92D3 /* Code144.swift */; };
 		7E6E5888239D0006003D92D3 /* Code145.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E5887239D0006003D92D3 /* Code145.swift */; };
 		7E6E588A239D2E0B003D92D3 /* Code104.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E5889239D2E0B003D92D3 /* Code104.swift */; };
+		7EA73D7623A1077700A6C8C1 /* Code26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA73D7523A1077700A6C8C1 /* Code26.swift */; };
 		7EEFD624239D36640086B3C0 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEFD623239D36640086B3C0 /* ListNode.swift */; };
 		7EEFD626239D36840086B3C0 /* Code2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEFD625239D36840086B3C0 /* Code2.swift */; };
 		7EEFD628239D565E0086B3C0 /* Code4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEFD627239D565E0086B3C0 /* Code4.swift */; };
@@ -39,6 +40,7 @@
 		7E6E5885239CF59C003D92D3 /* Code144.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code144.swift; sourceTree = "<group>"; };
 		7E6E5887239D0006003D92D3 /* Code145.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code145.swift; sourceTree = "<group>"; };
 		7E6E5889239D2E0B003D92D3 /* Code104.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code104.swift; sourceTree = "<group>"; };
+		7EA73D7523A1077700A6C8C1 /* Code26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code26.swift; sourceTree = "<group>"; };
 		7EEFD623239D36640086B3C0 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		7EEFD625239D36840086B3C0 /* Code2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code2.swift; sourceTree = "<group>"; };
 		7EEFD627239D565E0086B3C0 /* Code4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code4.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				7E6E5885239CF59C003D92D3 /* Code144.swift */,
 				7E6E5887239D0006003D92D3 /* Code145.swift */,
 				7E6E5889239D2E0B003D92D3 /* Code104.swift */,
+				7EA73D7523A1077700A6C8C1 /* Code26.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				7EEFD624239D36640086B3C0 /* ListNode.swift in Sources */,
 				7E6E5888239D0006003D92D3 /* Code145.swift in Sources */,
+				7EA73D7623A1077700A6C8C1 /* Code26.swift in Sources */,
 				7E6E5886239CF59D003D92D3 /* Code144.swift in Sources */,
 				7EEFD62A239D62370086B3C0 /* Code25.swift in Sources */,
 				7E6E588A239D2E0B003D92D3 /* Code104.swift in Sources */,
