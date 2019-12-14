@@ -43,6 +43,35 @@
 		7E233B5223A246A100C9E13E /* Code25.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Code25.swift; sourceTree = "<group>"; };
 		7E233B5D23A246C900C9E13E /* ListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		7E233B5E23A246C900C9E13E /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
+		7E53CE0C23A55BBA0064388B /* Code5.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Code5.rb; sourceTree = "<group>"; };
+		7E53CE0D23A55BBA0064388B /* Code1.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Code1.rb; sourceTree = "<group>"; };
+		7E53CE0E23A55BBA0064388B /* Code7.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Code7.rb; sourceTree = "<group>"; };
+		7E53CE0F23A55BBA0064388B /* Code6.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Code6.rb; sourceTree = "<group>"; };
+		7E53CE1123A55BBA0064388B /* Code13.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code13.py; sourceTree = "<group>"; };
+		7E53CE1223A55BBA0064388B /* Code27.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code27.py; sourceTree = "<group>"; };
+		7E53CE1323A55BBA0064388B /* Code23.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code23.py; sourceTree = "<group>"; };
+		7E53CE1423A55BBA0064388B /* Code17.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code17.py; sourceTree = "<group>"; };
+		7E53CE1523A55BBA0064388B /* Code2.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code2.py; sourceTree = "<group>"; };
+		7E53CE1623A55BBA0064388B /* Code22.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code22.py; sourceTree = "<group>"; };
+		7E53CE1723A55BBA0064388B /* Code16.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code16.py; sourceTree = "<group>"; };
+		7E53CE1823A55BBA0064388B /* Code3.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code3.py; sourceTree = "<group>"; };
+		7E53CE1923A55BBA0064388B /* Code12.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code12.py; sourceTree = "<group>"; };
+		7E53CE1A23A55BBA0064388B /* Code19.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code19.py; sourceTree = "<group>"; };
+		7E53CE1B23A55BBA0064388B /* Code8.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code8.py; sourceTree = "<group>"; };
+		7E53CE1C23A55BBA0064388B /* Code9.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code9.py; sourceTree = "<group>"; };
+		7E53CE1D23A55BBA0064388B /* Code18.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code18.py; sourceTree = "<group>"; };
+		7E53CE1E23A55BBA0064388B /* Code215.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code215.py; sourceTree = "<group>"; };
+		7E53CE1F23A55BBA0064388B /* Code21.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code21.py; sourceTree = "<group>"; };
+		7E53CE2023A55BBA0064388B /* Code15.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code15.py; sourceTree = "<group>"; };
+		7E53CE2123A55BBA0064388B /* Code11.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code11.py; sourceTree = "<group>"; };
+		7E53CE2223A55BBA0064388B /* Code25.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code25.py; sourceTree = "<group>"; };
+		7E53CE2323A55BBA0064388B /* Code10.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code10.py; sourceTree = "<group>"; };
+		7E53CE2423A55BBA0064388B /* Code24.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code24.py; sourceTree = "<group>"; };
+		7E53CE2523A55BBA0064388B /* Code20.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code20.py; sourceTree = "<group>"; };
+		7E53CE2723A55BBA0064388B /* ListNode.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ListNode.py; sourceTree = "<group>"; };
+		7E53CE2923A55BBA0064388B /* ListNode.cpython-37.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ListNode.cpython-37.pyc"; sourceTree = "<group>"; };
+		7E53CE2A23A55BBA0064388B /* Code14.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code14.py; sourceTree = "<group>"; };
+		7E53CE2B23A55BBA0064388B /* Code1.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Code1.py; sourceTree = "<group>"; };
 		7E6E5877239CEE6F003D92D3 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6E587A239CEE6F003D92D3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,9 +87,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E53CE0B23A55BBA0064388B /* Ruby */ = {
+			isa = PBXGroup;
+			children = (
+				7E53CE0C23A55BBA0064388B /* Code5.rb */,
+				7E53CE0D23A55BBA0064388B /* Code1.rb */,
+				7E53CE0E23A55BBA0064388B /* Code7.rb */,
+				7E53CE0F23A55BBA0064388B /* Code6.rb */,
+			);
+			name = Ruby;
+			path = ../Ruby;
+			sourceTree = "<group>";
+		};
+		7E53CE1023A55BBA0064388B /* Python */ = {
+			isa = PBXGroup;
+			children = (
+				7E53CE1123A55BBA0064388B /* Code13.py */,
+				7E53CE1223A55BBA0064388B /* Code27.py */,
+				7E53CE1323A55BBA0064388B /* Code23.py */,
+				7E53CE1423A55BBA0064388B /* Code17.py */,
+				7E53CE1523A55BBA0064388B /* Code2.py */,
+				7E53CE1623A55BBA0064388B /* Code22.py */,
+				7E53CE1723A55BBA0064388B /* Code16.py */,
+				7E53CE1823A55BBA0064388B /* Code3.py */,
+				7E53CE1923A55BBA0064388B /* Code12.py */,
+				7E53CE1A23A55BBA0064388B /* Code19.py */,
+				7E53CE1B23A55BBA0064388B /* Code8.py */,
+				7E53CE1C23A55BBA0064388B /* Code9.py */,
+				7E53CE1D23A55BBA0064388B /* Code18.py */,
+				7E53CE1E23A55BBA0064388B /* Code215.py */,
+				7E53CE1F23A55BBA0064388B /* Code21.py */,
+				7E53CE2023A55BBA0064388B /* Code15.py */,
+				7E53CE2123A55BBA0064388B /* Code11.py */,
+				7E53CE2223A55BBA0064388B /* Code25.py */,
+				7E53CE2323A55BBA0064388B /* Code10.py */,
+				7E53CE2423A55BBA0064388B /* Code24.py */,
+				7E53CE2523A55BBA0064388B /* Code20.py */,
+				7E53CE2623A55BBA0064388B /* Tool */,
+				7E53CE2A23A55BBA0064388B /* Code14.py */,
+				7E53CE2B23A55BBA0064388B /* Code1.py */,
+			);
+			name = Python;
+			path = ../Python;
+			sourceTree = "<group>";
+		};
+		7E53CE2623A55BBA0064388B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				7E53CE2723A55BBA0064388B /* ListNode.py */,
+				7E53CE2823A55BBA0064388B /* __pycache__ */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		7E53CE2823A55BBA0064388B /* __pycache__ */ = {
+			isa = PBXGroup;
+			children = (
+				7E53CE2923A55BBA0064388B /* ListNode.cpython-37.pyc */,
+			);
+			path = __pycache__;
+			sourceTree = "<group>";
+		};
 		7E6E586E239CEE6F003D92D3 = {
 			isa = PBXGroup;
 			children = (
+				7E53CE1023A55BBA0064388B /* Python */,
+				7E53CE0B23A55BBA0064388B /* Ruby */,
 				7E233B4E23A246A100C9E13E /* Code2.swift */,
 				7E233B5023A246A100C9E13E /* Code4.swift */,
 				7E233B5223A246A100C9E13E /* Code25.swift */,
