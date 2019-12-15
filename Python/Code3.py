@@ -5,11 +5,7 @@
 
 
 class Solution:
-    def lengthOfLongestSubstring(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+    def lengthOfLongestSubstring(self, s) -> int:
         sub_s = ''
         maxSub_s = ''
         for character in s:
@@ -27,6 +23,5 @@ class Solution:
                 continue
         length = len(maxSub_s) if len(maxSub_s) > len(sub_s) else len(sub_s)
         return length
-
 if __name__ == '__main__':
     Solution().lengthOfLongestSubstring('aab')
