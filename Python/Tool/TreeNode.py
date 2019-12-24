@@ -23,7 +23,7 @@ class TreeNode(Generic[T]):
         self.right = right
 
     # 前序：中左右
-    def font_order(self) -> [int]:
+    def font_order(self) -> [T]:
         stack = [self]
         values = []
         while len(stack) != 0:
@@ -33,11 +33,10 @@ class TreeNode(Generic[T]):
                 stack.append(node.right)
             if node.left is not None:
                 stack.append(node.left)
-        print(values)
         return values
 
     # 中序：左中右
-    def middle_order(self):
+    def middle_order(self) -> [T]:
         head = self
         stack = []
         values = []
@@ -49,26 +48,37 @@ class TreeNode(Generic[T]):
                 head = stack.pop()
                 values.append(head.val)
                 head = head.right
-        print(values)
         return values
 
-    # 后序：左右中
-    def back_order(self):
-        stack = []
+    # 后序：左右中=~中右左
+    def back_order(self) -> [T]:
+        stack = [self]
         values = []
-        head = self
-        while len(stack) != 0 or head is not None:
-            if head is not None:
-                values.append(head.val)
-                stack.append(head)
-                head = head.right
-            else:
-                head = stack.pop()
-                head = head.left
-        values.reverse()
-        print(values)
+        while len(stack) != 0:
+            node = stack.pop()
+            values.append(node.val)
+            if node.left is not None:
+                stack.append(node.left)
+            if node.right is not None:
+                stack.append(node.right)
+        return values[::-1]
+
+    def level_order_array(self) -> []:
+        queue = [self]
+        values = []
+        while len(queue) != 0:
+            node = queue[0]
+            values.append(node.val)
+            del queue[0]
+            if node.left is not None:
+                queue.append(node.left)
+            if node.right is not None:
+                queue.append(node.right)
         return values
 
-TreeNode[str].node(["A", "B", "C", "D", "E", "F"]).font_order()
-TreeNode[str].node(["A", "B", "C", "D", "E", "F"]).middle_order()
-TreeNode[str].node(["A", "B", "C", "D", "E", "F"]).back_order()
+
+tree = TreeNode[str].node([1, 2, 3, None, 4, 5, 6, None, None, None, None, 7, 8])
+print(tree.font_order())
+# print(tree.middle_order())
+print(tree.back_order())
+# print(tree.level_order())
