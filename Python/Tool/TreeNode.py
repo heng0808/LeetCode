@@ -9,10 +9,10 @@ class TreeNode:
     @staticmethod
     def node(vals: []):
         # 完全二叉树通过当前节点可以知道子节点的位置
-        stack = []
-        for val in vals:
-            if len(stack) == 0:
-
-        if len(vals) > 0:
-            return ListNode(vals)
-        return None
+        def createNode(index:int) -> TreeNode:
+            if index >= len(vals):
+                return None
+            if vals[index] == None:
+                return None
+            return TreeNode(val=vals[index], left=createNode(2 * index + 1), right=createNode(2 * index + 2))
+        return createNode(0)
