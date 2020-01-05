@@ -1,24 +1,32 @@
 class Solution:
-    def longestValidParentheses(self, s: str) -> int:
-        # 超时
-        def isValid(subs:str) -> bool:
-            stack = []
-            for charactor in subs:
-                if charactor == "(":
-                    stack.append(charactor)
-                elif len(stack) != 0 and stack[-1] == "(":
-                    stack.pop()
-                else:
-                    return False
-            return len(stack) == 0
-        maxLength = 0
-        for i in range(0, len(s)):
-            for j in range(i+2, len(s)+1, 2):
-                if isValid(s[i:j]):
-                    maxLength = max(maxLength, len(s[i:j]))
-        return maxLength
-print(Solution().longestValidParentheses(")()())"))
-# print(Solution().longestValidParentheses("(()"))
-# print(Solution().longestValidParentheses("()"))
-# print(Solution().longestValidParentheses(")()(((())))("))
-# print(Solution().longestValidParentheses("()(()"))
+    def nextPermutation(self, nums: [int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        if len(nums) < 2:
+            return
+        elif len(nums) == 2:
+            temp = nums[1]
+            nums[1] = nums[0]
+            nums[0] = temp
+            return
+        min_left = len(nums) - 1
+        while min_left > 0:
+            min_left = min_left - 1
+            if nums[min_left] < nums[min_left + 1]:
+                break
+        if min_left > 0:
+            max_right = min_left + 1
+            while max_right < len(nums):
+                if nums[max_right] < nums[min_left]:
+                    max_right = max_right - 1
+                    break
+                max_right = max_right + 1
+        else:
+            nums.sort()
+
+# nums = [1, 2, 3]
+# nums = [1, 1, 5]
+nums = [1, 2, 1]
+Solution().nextPermutation(nums)
+print(nums)
