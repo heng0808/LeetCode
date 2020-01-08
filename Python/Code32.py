@@ -1,24 +1,48 @@
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
-        # 超时
-        def isValid(subs:str) -> bool:
-            stack = []
-            for charactor in subs:
-                if charactor == "(":
-                    stack.append(charactor)
-                elif len(stack) != 0 and stack[-1] == "(":
-                    stack.pop()
-                else:
-                    return False
-            return len(stack) == 0
-        maxLength = 0
-        for i in range(0, len(s)):
-            for j in range(i+2, len(s)+1, 2):
-                if isValid(s[i:j]):
-                    maxLength = max(maxLength, len(s[i:j]))
-        return maxLength
-print(Solution().longestValidParentheses(")()())"))
+        maxlength = 0
+        leftcount = 0
+        rightcount = 0
+        for index in range(0, len(s)):
+            if s[index] == '(':
+                leftcount = leftcount + 1
+            else:
+                rightcount = rightcount + 1
+            if rightcount == leftcount:
+                maxlength = max(maxlength, leftcount + rightcount)
+            elif rightcount > leftcount:
+                leftcount = 0
+                rightcount = 0
+
+        rightcount = 0
+        leftcount = 0
+        for index in reversed(range(0, len(s))):
+            if s[index] == ')':
+                rightcount = rightcount + 1
+            else:
+                leftcount = leftcount + 1
+            if rightcount == leftcount:
+                maxlength = max(maxlength, rightcount + leftcount)
+            elif leftcount > rightcount:
+                leftcount = 0
+                rightcount = 0
+        return maxlength
+
+        # maxlength = 0
+        # stack = [-1]
+        # for index in range(0, len(s)):
+        #     if s[index] == '(':
+        #         stack.append(index)
+        #     else:
+        #         stack.pop()
+        #         if len(stack) == 0:
+        #             stack.append(index)
+        #         else:
+        #             maxlength = max(maxlength, index - stack[-1])
+        return maxlength
+# print(Solution().longestValidParentheses("()()"))
+# print(Solution().longestValidParentheses(")()())"))
 # print(Solution().longestValidParentheses("(()"))
 # print(Solution().longestValidParentheses("()"))
-# print(Solution().longestValidParentheses(")()(((())))("))
-# print(Solution().longestValidParentheses("()(()"))
+print(Solution().longestValidParentheses(")()(((())))("))
+# print(Solution().longestValidParentheses("()((())"))

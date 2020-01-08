@@ -10,23 +10,31 @@ class Solution:
             nums[1] = nums[0]
             nums[0] = temp
             return
-        min_left = len(nums) - 1
-        while min_left > 0:
-            min_left = min_left - 1
-            if nums[min_left] < nums[min_left + 1]:
-                break
-        if min_left > 0:
-            max_right = min_left + 1
-            while max_right < len(nums):
-                if nums[max_right] < nums[min_left]:
-                    max_right = max_right - 1
-                    break
-                max_right = max_right + 1
-        else:
-            nums.sort()
+        i = len(nums) - 2
+        while i >= 0:
+            if nums[i] < nums[i + 1]:
+                # 找到了
+                j = len(nums) - 1
+                while j > i:
+                    if nums[j] > nums[i]:
+                        # 找到交换的了
+                        temp = nums[j]
+                        nums[j] = nums[i]
+                        nums[i] = temp
+                        for k in range(i + 1, len(nums)):
+                            for l in range(k + 1, len(nums)):
+                                if nums[k] > nums[l]:
+                                    temp = nums[l]
+                                    nums[l] = nums[k]
+                                    nums[k] = temp
+                        return
+                    j = j - 1
+            i = i - 1
+        nums.sort(reverse=False)
+
 
 # nums = [1, 2, 3]
 # nums = [1, 1, 5]
-nums = [1, 2, 1]
+nums = [1, 3, 2]
 Solution().nextPermutation(nums)
 print(nums)
