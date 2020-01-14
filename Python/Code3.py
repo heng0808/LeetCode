@@ -6,22 +6,29 @@
 
 class Solution:
     def lengthOfLongestSubstring(self, s) -> int:
-        sub_s = ''
-        maxSub_s = ''
-        for character in s:
-            try:
-                index = sub_s.index(character)
-                if len(sub_s) > len(maxSub_s):
-                    maxSub_s = sub_s
-                try:
-                    sub_s = sub_s[index + 1:]
-                except:
-                    sub_s = ''
-                sub_s = sub_s + character
-            except:
-                sub_s = sub_s + character
-                continue
-        length = len(maxSub_s) if len(maxSub_s) > len(sub_s) else len(sub_s)
-        return length
-if __name__ == '__main__':
-    Solution().lengthOfLongestSubstring('aab')
+        if len(s) < 2:
+            return len(s)
+        left = 0
+        right = 1
+        lookup = {s[left]: 1}
+        max_len = 0
+        while right < len(s):
+            character = s[right]
+            if character in lookup and lookup[character] > 0:
+                # 当前窗口存在该字符
+                max_len = max(max_len, right - left)
+                while lookup[character] > 0:
+                    remove_character = s[left]
+                    if remove_character in lookup:
+                        lookup[remove_character] = lookup[remove_character] - 1
+                    left = left + 1
+            else:
+                right = right + 1
+                lookup[character] = 1
+        return max(max_len, right - left)
+
+print(Solution().lengthOfLongestSubstring("ab"))
+print(Solution().lengthOfLongestSubstring('abcabcbb'))
+print(Solution().lengthOfLongestSubstring('pwwkew'))
+print(Solution().lengthOfLongestSubstring(''))
+print(Solution().lengthOfLongestSubstring('abcdefg'))
