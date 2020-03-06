@@ -13,14 +13,30 @@ class Solution:
         # return total
 
         # Solution 2
+        # total = []
+        # for count in range(target + 1, 1, -1):
+        #     first = (target - count * (count - 1) * 0.5) / count
+        #     if first > 0 and first % 1 == 0:
+        #         result = []
+        #         first = int(first)
+        #         for i in range(0, count):
+        #             result.append(first + i)
+        #         total.append(result)
+        # return total
+        
+        # Solution 3
         total = []
-        for count in range(target + 1, 1, -1):
-            first = (target - count * (count - 1) * 0.5) / count
-            if first > 0 and first % 1 == 0:
-                result = []
-                first = int(first)
-                for i in range(0, count):
-                    result.append(first + i)
-                total.append(result)
+        last = int(target / 2) if target % 2 == 0 else int((target + 1) / 2)
+        left = 1
+        right = 2
+        while last > 1 and left != right and right <= last:
+            result = sum(range(left, right + 1))
+            if result == target:
+                total.append(list(range(left, right + 1)))
+                right = right + 1
+            elif result < target:
+                right = right + 1
+            else:
+                left = left + 1
         return total
-Solution().findContinuousSequence(9)
+Solution().findContinuousSequence(10)
