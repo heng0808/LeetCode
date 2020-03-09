@@ -1,6 +1,6 @@
 import sys
 class Solution:
-    def coinChange(self, coins: [int], amount: int) -> int:
+    # def coinChange(self, coins: [int], amount: int) -> int:
         # Solution 1
         # if amount == 0:
         #     return 0
@@ -65,31 +65,52 @@ class Solution:
         # change(amount, 0, [])
         # return -1 if len(minCompose) == 0 else sum(minCompose)
 
-        # Solution 3 (remove record)
+    # Solution 4 
+    minCount = sys.maxsize
+    def coinChange(self, coins: [int], amount: int) -> int:
         coins.sort(reverse=True)
-        minCompose = sys.maxsize
-        def change(remain:int, coinIndex:int, compose:int):
-            nonlocal minCompose
-            if remain == 0:
-                minCompose = 0
-                return
-            if coinIndex == len(coins):
-                return
-            if compose >= minCompose:
-                return
-            piece_max = int(remain / coins[coinIndex])
-            piece_max = piece_max if piece_max < minCompose - compose else minCompose - compose
-            for count in range(piece_max, -1, -1):
-                nextCompose = compose + count
-                nextRemain = remain - count * coins[coinIndex]
-                if nextRemain == 0:
-                    minCompose = nextCompose
-                    break
-                else:
-                    change(nextRemain, coinIndex + 1, nextCompose)
-        change(amount, 0, 0)
-        return -1 if minCompose == sys.maxsize else minCompose
-# print(Solution().coinChange([1, 2, 5], 11))
+        self.dfs(amount, coins, 0, 0)
+        return -1 if self.minCount == sys.maxsize else self.minCount
+
+    def dfs(self, remain:int, coins:[int], coinIndex:int, currentCount:int):
+        if remain == 0:
+            self.minCount = 0
+            return
+        if coinIndex == len(coins):
+            return
+        piece = int(remain / coins[coinIndex])
+        piece_max = min(self.minCount - currentCount, piece)
+        for count in range(piece_max, -1, -1):
+            nextRemain = remain - count * coins[coinIndex]
+            nextCoinIndex = coinIndex + 1
+            if nextRemain == 0:
+                self.minCount = currentCount + count
+                break
+            elif nextRemain > 0 and nextCoinIndex < len(coins):
+                self.dfs(nextRemain, coins, nextCoinIndex, currentCount + count)
+
+    # Solution
+    # ans = sys.maxsize
+    # def coinChange(self, coins: [int], amount: int) -> int:
+    #     coins.sort()
+    #     self.dfs(coins, len(coins) - 1, amount, 0)
+    #     return -1 if self.ans == sys.maxsize else self.ans
+
+    # def dfs(self, coins: [int], index:int, amount: int, cnt: int):
+    #     if index < 0:
+    #         return
+    #     for c in range(int(amount/coins[index]), -1, -1):
+    #         na = amount - c * coins[index]
+    #         ncnt = cnt + c
+    #         if na == 0:
+    #             self.ans = ncnt if ncnt < self.ans else self.ans
+    #             break
+    #         if ncnt + 1 > self.ans:
+    #             break
+    #         self.dfs(coins, index - 1, na, ncnt)
+                
+
+print(Solution().coinChange([1, 2, 5], 11))
 # print(Solution().coinChange([1, 2, 5], 70))
 # print(Solution().coinChange([1], 0))
 # print(Solution().coinChange([1], 1))
