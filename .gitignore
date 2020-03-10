@@ -1,5 +1,5 @@
-.idea/
-.vscode/
-.DS_Store
-venv
-Swift/LeetCode.xcodeproj/project.xcworkspace/xcuserdata
+**/.vscode/
+**/.idea/
+**/__pycache__/
+**/xcuserdata
+**/.DS_Store
