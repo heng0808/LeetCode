@@ -4,28 +4,28 @@ import sys
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         profit = 0
-        priceQueue = []
+        priceStack = []
         for price in prices:
-            if len(priceQueue) == 0:
-                priceQueue.append(price)
+            if len(priceStack) == 0:
+                priceStack.append(price)
             else:
-                if len(priceQueue) > 1:
-                    if price > priceQueue[-1]:
-                        priceQueue.pop()
-                        priceQueue.append(price)
-                    elif price < priceQueue[-1]:
-                        profit = profit + (priceQueue[-1] - priceQueue[0])
-                        priceQueue.pop()
-                        priceQueue.pop()
-                        priceQueue.append(price)
-                elif len(priceQueue) == 1:
-                    if price > priceQueue[0]:
-                        priceQueue.append(price)
-                    elif price < priceQueue[0]:
-                        priceQueue.pop()
-                        priceQueue.append(price)
-        if len(priceQueue) > 1:
-            profit = profit + (priceQueue[-1] - priceQueue[0])
+                if len(priceStack) > 1:
+                    if price > priceStack[-1]:
+                        priceStack.pop()
+                        priceStack.append(price)
+                    elif price < priceStack[-1]:
+                        profit = profit + (priceStack[-1] - priceStack[0])
+                        priceStack.pop()
+                        priceStack.pop()
+                        priceStack.append(price)
+                elif len(priceStack) == 1:
+                    if price > priceStack[0]:
+                        priceStack.append(price)
+                    elif price < priceStack[0]:
+                        priceStack.pop()
+                        priceStack.append(price)
+        if len(priceStack) > 1:
+            profit = profit + (priceStack[-1] - priceStack[0])
         return profit
 
 print(Solution().maxProfit([7,1,5,3,6,4]))
