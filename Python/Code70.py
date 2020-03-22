@@ -9,31 +9,40 @@
 # 3. 2 阶 + 1 阶
 
 class Solution:
-    def climbStairs(self, n: int) -> int:
-        def combination(m:int, n:int) -> int:
-            n_factorial = 1
-            for i in range(1, n + 1):
-                n_factorial = n_factorial * i
-            m_factorial = 1
-            for i in range(1, m + 1):
-                m_factorial = m_factorial * i
-            n_m_factorial = 1
-            for i in range(1, n - m + 1):
-                n_m_factorial = n_m_factorial * i
-            return int(n_factorial / (m_factorial * n_m_factorial))
+    # def climbStairs(self, n: int) -> int:
+    #     def combination(m:int, n:int) -> int:
+    #         n_factorial = 1
+    #         for i in range(1, n + 1):
+    #             n_factorial = n_factorial * i
+    #         m_factorial = 1
+    #         for i in range(1, m + 1):
+    #             m_factorial = m_factorial * i
+    #         n_m_factorial = 1
+    #         for i in range(1, n - m + 1):
+    #             n_m_factorial = n_m_factorial * i
+    #         return int(n_factorial / (m_factorial * n_m_factorial))
 
-        # 两个台阶的个数x
-        # 1个台阶的格式n-2x
-        # 总的步数n-2x+x=n-x
-        # 组合数C(n-2x,n-x)
-        ans = 0
-        x = 0
-        while x * 2 <= n:
-            temp = combination(n - 2 * x, n - x)
-            ans = ans + temp
-            x = x + 1
-        return ans
+    #     # 两个台阶的个数x
+    #     # 1个台阶的格式n-2x
+    #     # 总的步数n-2x+x=n-x
+    #     # 组合数C(n-2x,n-x)
+    #     ans = 0
+    #     x = 0
+    #     while x * 2 <= n:
+    #         temp = combination(n - 2 * x, n - x)
+    #         ans = ans + temp
+    #         x = x + 1
+    #     return ans
+
+    def climbStairs(self, n: int) -> int:
+        def climbNextStair(distance:int) -> int:
+            if distance > n:
+                return 0
+            elif distance == n:
+                return 1
+            return climbNextStair(distance + 1) + climbNextStair(distance + 2)
+        return climbNextStair(1) + climbNextStair(2)
 
 # print(Solution().climbStairs(2))
 # print(Solution().climbStairs(3))
-print(Solution().climbStairs(4))
+print(Solution().climbStairs(38))
