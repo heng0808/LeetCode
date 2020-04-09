@@ -5,7 +5,7 @@ class Solution:
         sequences = []
         sequenceIndexs = []
         def permute():
-            if len(sequences) == 0:
+            if len(nums) == 0:
                 return
             # 没什么可以选择的了
             if len(sequenceIndexs) == len(nums):
@@ -30,4 +30,4 @@ class Solution:
         permute()
         return sequences
 
-print(Solution().permuteUnique([]))
+print(Solution().permuteUnique([1,1,2]))
