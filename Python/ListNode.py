@@ -1,10 +1,7 @@
 class ListNode:
-    def __init__(self, vals: []):
-            self.val = vals[0]
-            if len(vals) > 1:
-                self.next = ListNode(vals[1:])
-            else:
-                self.next = None
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
     def __str__(self):
         if self.next == None:
@@ -18,6 +15,13 @@ class ListNode:
 
     @staticmethod
     def node(vals: []):
-        if len(vals) > 0:
-            return ListNode(vals)
-        return None
+        head = None
+        node = None
+        for val in vals:
+            if head == None:
+                head = ListNode(val)
+                node = head
+            else:
+                node.next = ListNode(val)
+                node = node.next
+        return head

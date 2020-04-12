@@ -48,7 +48,7 @@ class Solution:
                         l2Node = l2Node.next
             return rootNode
 
-node1 = ListNode("124")
-node2 = ListNode("134")
+node1 = ListNode.node("124")
+node2 = ListNode.node("134")
 node = Solution().mergeTwoLists(node1, node2)
 pass
