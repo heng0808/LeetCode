@@ -11,24 +11,23 @@ class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
         ans = 0
         stack = []
+        heights.append(0)
         for index in range(0, len(heights)):
-            if len(stack) == 0:
-                stack.append(index)
-            elif heights[stack[-1]] <= heights[index]:
-                stack.append(index)
-            else:
+            if len(stack) > 0 and heights[stack[-1]] >= heights[index]:
                 # 减小了 计算前面最大
-                while len(stack) > 0 and heights[stack[-1]] > heights[index]:
+                while len(stack) > 0 and heights[stack[-1]] >= heights[index]:
                     left_index = stack.pop()
-                    ans = max(ans, (index - left_index) * heights[left_index])
-                stack.append(index)
-        while len(stack) > 0:
-            left_index = stack.pop(-1)
-            stack_length = len(stack)
-            if stack_length == 0:
-                ans = max(ans, len(heights) * heights[left_index])
-            else:
-                ans = max(ans, (len(heights) - left_index) * heights[left_index])
+                    stack_length = len(stack)
+                    if stack_length == 1:
+                        if heights[-1] == 0:
+                            ans = max(ans, (index - (stack[-1] + 1)) * heights[left_index])
+                        else:
+                            ans = max(ans, (index - left_index + (left_index - stack[-1] - 1)) * heights[left_index])
+                    elif stack_length == 0:
+                        ans = max(ans, index * heights[left_index])
+                    else:
+                        ans = max(ans, (index - left_index + (left_index - stack[-1] - 1)) * heights[left_index])
+            stack.append(index)
         return ans
     # 分治
     # def largestRectangleArea(self, heights: List[int]) -> int:
@@ -82,9 +81,11 @@ class Solution:
     #         heights = nextHeights
     #     return ans
 # @lc code=end
-
+print(Solution().largestRectangleArea([5,5,1,7,1,1,5,2,7,6]))
+# print(Solution().largestRectangleArea([3,6,5,7,4,8,1,0]))
+# print(Solution().largestRectangleArea([4,2,0,3,2,5]))
 # print(Solution().largestRectangleArea([2,0,5,6,2,3]))
-print(Solution().largestRectangleArea([5,4,1,2]))
+# print(Solution().largestRectangleArea([5,4,1,2]))
 # print(Solution().largestRectangleArea([1]))
 # print(Solution().largestRectangleArea([0,0,0,0,0,0,0,0,2147483647]))
 # print(Solution().largestRectangleArea([0,1,2,3,4,5]))
