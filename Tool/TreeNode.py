@@ -75,10 +75,3 @@ class TreeNode(Generic[T]):
             if node.right is not None:
                 queue.append(node.right)
         return values
-
-
-tree = TreeNode[str].node([1, 2, 3, None, 4, 5, 6, None, None, None, None, 7, 8])
-print(tree.font_order())
-# print(tree.middle_order())
-print(tree.back_order())
-# print(tree.level_order())

@@ -3,7 +3,7 @@
 #
 # [82] 删除排序链表中的重复元素 II
 #
-from Python.ListNode import ListNode
+from Tool.ListNode import ListNode
 # @lc code=start
 # Definition for singly-linked list.
 # class ListNode:

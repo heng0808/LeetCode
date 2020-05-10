@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.next = None
 
-from Python.ListNode import ListNode
+from Tool.ListNode import ListNode
 
 class Solution:
     def swapPairs(self, head: ListNode) -> ListNode:
