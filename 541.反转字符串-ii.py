@@ -1,0 +1,34 @@
+#
+# @lc app=leetcode.cn id=541 lang=python3
+#
+# [541] 反转字符串 II
+#
+
+# @lc code=start
+class Solution:
+    def reverseStr(self, s: str, k: int) -> str:
+        _ans = ''
+        _range = range(0, 2 * k)
+        while True:
+            remain_l = len(s) - _range.start
+            if remain_l < 1:
+                break
+            else:
+                _range = range(_range.start, _range.start + min(remain_l, 2 * k))
+            stack = []
+            for index in _range:
+                if index % (2 * k) < k:
+                    stack.append(s[index])
+                else:
+                    if len(stack) > 0:
+                        while len(stack) > 0:
+                            charactor = stack.pop()
+                            _ans = _ans + charactor
+                    _ans = _ans + s[index]
+            while len(stack) > 0:
+                charactor = stack.pop()
+                _ans = _ans + charactor
+            _range = range(_range.start + 2 * k, _range.start + 2 * k + 2 * k)
+        return _ans
+# @lc code=end
+print(Solution().reverseStr('bacdfeghji', 2))
