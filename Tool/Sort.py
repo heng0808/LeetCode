@@ -1,22 +1,33 @@
-class ListNode:
+import random
+
+class Sort:
     @staticmethod
-    def quicksort(nums:[int]):
-        def sort(left, right):
-            if right <= left:
-                return
-            pointer = left + 1
-            start_left = left
-            while pointer <= right:
-                if nums[pointer] < nums[left]:
-                    num = nums[pointer]
-                    del nums[pointer]
-                    nums.insert(left, num)
-                    left = left + 1
-                pointer = pointer + 1
-            sort(start_left, left - 1)
-            sort(left + 1, right)
+    def quick(nums:[int]):
+        stack = [(0, len(nums) - 1)] if len(nums) > 0 else []
+        while len(stack) > 0:
+            (start, end) = stack.pop()
+            if end <= start:
+                continue
+            temp, low, high = nums[start], start, end
+            while low < high:
+                while low < high and nums[low] < temp:
+                    low = low + 1
+                while high > low and nums[high] >= temp:
+                    high = high - 1
+                num = nums[high]
+                nums[high] = nums[low]
+                nums[low] = num
+            if start < low and high < end:
+                stack.append((start, low - 1))
+                stack.append((high, end))                
+                
+    @staticmethod
+    def merge(nums:[int]):
+        pass
 
-        sort(left=0, right=len(nums) - 1)
-
-nums = [54, 26, 44, 17, 77, 31, 93, 55]
-ListNode.quicksort(nums)
+nums = []
+while len(nums) < 2:
+    nums.append(random.randint(0, 100))
+print("before sort: " + str(nums))
+Sort.quick(nums)
+print("after sort: " + str(nums))
