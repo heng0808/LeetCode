@@ -1,21 +1,43 @@
-# @Time    : 2019-07-21 17:08
-# @Author  : 张恒
-# @File    : Code11.py
-# @Software: PyCharm
-
-
+#
+# @lc app=leetcode.cn id=11 lang=python3
+#
+# [11] 盛最多水的容器
+#
+from typing import List
+# @lc code=start
 class Solution:
-    def maxArea(self, height: [int]):
+    def maxArea(self, height: List[int]) -> int:
+        ans = 0
         left = 0
         right = len(height) - 1
-        max_area = (right - left) * min(height[left], height[right])
-        while left != right:
-            left_value = height[left]
-            right_value = height[right]
-            if left_value < right_value:
+        while left < right:
+            ans = max(ans, (right - left) * min(height[right], height[left]))
+            if height[left] < height[right]:
                 left = left + 1
             else:
                 right = right - 1
-            max_area = max(max_area, (right - left) * min(height[left], height[right]))
-        return max_area
-print(Solution().maxArea([1,8,6,2,5,4,8,3,7]))
+        return ans
+    # Time Limit
+    # def maxArea(self, height: List[int]) -> int:
+    #     water = 1
+    #     ans = 0
+    #     while True:
+    #         left = 0
+    #         right = len(height) - 1
+    #         while left < right:
+    #             if height[left] < water:
+    #                 left = left + 1
+    #                 continue
+    #             elif height[right] < water:
+    #                 right = right - 1
+    #                 continue
+    #             else:
+    #                 ans = max(ans, (right - left) * water)
+    #                 break
+    #         if left == right:
+    #             break
+    #         else:
+    #             water = water + 1
+    #     return ans
+# @lc code=end
+print(Solution().maxArea([2,3,4,5,18,17,6]))
