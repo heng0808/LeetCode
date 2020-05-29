@@ -13,15 +13,19 @@ from Tool.ListNode import ListNode
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        def reverse(lastNode, node) -> ListNode:
-            if node.next == None:
-                node.next = lastNode
-                return node
+        lastNode = None
+        node = head
+        while node != None:
+            nodeNext = node.next
+            node.next = lastNode
+            lastNode = node
+            if nodeNext != None:
+                node = nodeNext
             else:
-                nextNode = node.next
-                node.next = lastNode
-                return reverse(node, nextNode)
-        return None if head == None else reverse(None, head)
+                head = node
+                break
+        return head
+        # return None if head == None else reverse(None, head)
 
         # stack = []
         # while head != None:
