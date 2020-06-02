@@ -7,37 +7,54 @@ from typing import List
 from sys import maxsize
 
 class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        if len(nums) == 1:
-            return nums[0]
-        ans = -maxsize
-        # left->right
-        left = 0
-        right = left + 1
-        result = nums[left]
-        while right < len(nums):
-            if result < 0 and nums[right] > result:
-                result = nums[right]
-                left = right
-            else:
-                result = result + nums[right]
-            ans = ans if ans > result else result
-            right = right + 1
+    # max(Sum(i, j)) = max(Sum(0, j) - min(Sum(0, i))) 
+    # def maxSubArray(self, nums: List[int]) -> int:
+    #     ans = None
+    #     min_pre = 0
+    #     preSum = 0
+    #     for i in range(0, len(nums)):
+    #         if ans == None:
+    #             ans = nums[i]
+    #             preSum = nums[i]
+    #             min_pre = min(min_pre, preSum)
+    #             print()
+    #         else:
+    #             preSum = preSum + nums[i]
+    #             ans = max(ans, preSum - min_pre)
+    #             min_pre = min(min_pre, preSum)
+    #             print()
+    #     return ans   
+    # def maxSubArray(self, nums: List[int]) -> int:
+    #     if len(nums) == 1:
+    #         return nums[0]
+    #     ans = -maxsize
+    #     # left->right
+    #     left = 0
+    #     right = left + 1
+    #     result = nums[left]
+    #     while right < len(nums):
+    #         if result < 0 and nums[right] > result:
+    #             result = nums[right]
+    #             left = right
+    #         else:
+    #             result = result + nums[right]
+    #         ans = ans if ans > result else result
+    #         right = right + 1
         
-        # right->left
-        right = len(nums) -1
-        left = right - 1
-        result = nums[right]
-        while left >= 0:
-            if result < 0 and nums[left] > result:
-                result = nums[left]
-                right = left
-            else:
-                result = result + nums[left]
-            ans = ans if ans > result else result
-            left = left - 1
+    #     # right->left
+    #     right = len(nums) -1
+    #     left = right - 1
+    #     result = nums[right]
+    #     while left >= 0:
+    #         if result < 0 and nums[left] > result:
+    #             result = nums[left]
+    #             right = left
+    #         else:
+    #             result = result + nums[left]
+    #         ans = ans if ans > result else result
+    #         left = left - 1
         
-        return ans
+    #     return ans
 
     # def maxSubArray(self, nums: List[int]) -> int:
     #     # 最大序列要么再左边，要么在右边，要么在中间，子序列也是一样的
