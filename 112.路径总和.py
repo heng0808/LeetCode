@@ -15,22 +15,13 @@ from Tool.TreeNode import TreeNode
 class Solution:
     # 递归
     def hasPathSum(self, root: TreeNode, sum: int) -> bool:
-        def nextStep(length:int, node:TreeNode) -> bool:
-            if node == None:
-                return False
-            else:
-                length = length + node.val
-                if node.left == None and node.right == None:
-                    if length == sum:
-                        return True
-                if node.left != None:
-                    if nextStep(length, node.left):
-                        return True
-                if node.right != None:
-                    if nextStep(length, node.right):
-                        return True
-                return False
-        return nextStep(0, root)
+        if not root:
+            return False
+        sum -= root.val
+        if not root.left and not root.right and sum == 0:
+            return True
+        return self.hasPathSum(root.left, sum) or self.hasPathSum
+                
                 
 # @lc code=end
 
