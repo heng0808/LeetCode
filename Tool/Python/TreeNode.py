@@ -5,22 +5,27 @@ T = TypeVar("T", str, int)
 
 
 class TreeNode(Generic[T]):
-    @staticmethod
-    def node(values: [T]):
+    # 根据数组构造完全二叉树
+    def __init__(self, vals:[int]):
+        if len(vals) == 0:
+            raise ValueError('vals is invalid')
         # 完全二叉树通过当前节点可以知道子节点的位置
         def create_node(index: int) -> TreeNode[T]:
-            if index >= len(values):
+            if index >= len(vals):
                 return None
-            if values[index] is None:
+            if vals[index] is None:
                 return None
-            return TreeNode(val=values[index], left=create_node(2 * index + 1), right=create_node(2 * index + 2))
-
-        return create_node(0)
-
-    def __init__(self, val: T, left: TreeNode[T], right: TreeNode[T]):
-        self.val = val
-        self.left = left
-        self.right = right
+            node = TreeNode([vals[index]])
+            node.left = create_node(2 * index + 1)
+            node.right = create_node(2 * index + 2)
+            return node
+        self.val = vals[0]
+        if len(vals) == 1:
+            self.left = None
+            self.right = None
+        else:
+            self.left = create_node(1)
+            self.right = create_node(2)
 
     # 前序：中左右
     def font_order(self) -> [T]:

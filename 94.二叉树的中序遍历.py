@@ -31,4 +31,4 @@ class Solution:
         return ans
         
 # @lc code=end
-print(Solution().inorderTraversal(TreeNode.node([1,None,2,None,None,3])))
+print(Solution().inorderTraversal(TreeNode([1,None,2,None,None,3])))

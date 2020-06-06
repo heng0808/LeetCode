@@ -42,7 +42,7 @@ class Solution:
             else:
                 return p_stack[index - 1]
 # @lc code=end
-root = TreeNode.node([3,5,1,6,2,0,8,None,None,7,4])
+root = TreeNode([3,5,1,6,2,0,8,None,None,7,4])
 p = root.left
 q = root.left.right.right
 print(Solution().lowestCommonAncestor(root, p, q).val)
