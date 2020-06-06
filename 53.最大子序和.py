@@ -8,22 +8,23 @@ from sys import maxsize
 
 class Solution:
     # max(Sum(i, j)) = max(Sum(0, j) - min(Sum(0, i))) 
-    # def maxSubArray(self, nums: List[int]) -> int:
-    #     ans = None
-    #     min_pre = 0
-    #     preSum = 0
-    #     for i in range(0, len(nums)):
-    #         if ans == None:
-    #             ans = nums[i]
-    #             preSum = nums[i]
-    #             min_pre = min(min_pre, preSum)
-    #             print()
-    #         else:
-    #             preSum = preSum + nums[i]
-    #             ans = max(ans, preSum - min_pre)
-    #             min_pre = min(min_pre, preSum)
-    #             print()
-    #     return ans   
+    def maxSubArray(self, nums: List[int]) -> int:
+        ans = None
+        min_pre = 0
+        preSum = 0
+        for i in range(0, len(nums)):
+            if ans == None:
+                ans = nums[i]
+                preSum = nums[i]
+                min_pre = min(min_pre, preSum)
+                print()
+            else:
+                preSum = preSum + nums[i]
+                ans = max(ans, preSum - min_pre)
+                min_pre = min(min_pre, preSum)
+                print()
+        return ans   
+        
     # def maxSubArray(self, nums: List[int]) -> int:
     #     if len(nums) == 1:
     #         return nums[0]
