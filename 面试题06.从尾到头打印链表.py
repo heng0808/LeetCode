@@ -3,7 +3,7 @@
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
-from Tool.ListNode import ListNode
+from Tool.Python.ListNode import ListNode
 from typing import List
 class Solution:
     def reversePrint(self, head: ListNode) -> List[int]:

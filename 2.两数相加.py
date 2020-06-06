@@ -3,7 +3,7 @@
 #
 # [2] 两数相加
 #
-from Tool.ListNode import ListNode
+from Tool.Python.ListNode import ListNode
 # @lc code=start
 # Definition for singly-linked list.
 # class ListNode:

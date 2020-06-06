@@ -1,4 +1,4 @@
-from Tool.ListNode import ListNode
+from Tool.Python.ListNode import ListNode
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         pre = None

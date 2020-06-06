@@ -12,7 +12,7 @@
 #         self.left = None
 #         self.right = None
 from typing import List
-from Tool.TreeNode import TreeNode
+from Tool.Python.TreeNode import TreeNode
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
         def tree(preorder_l:int, preorder_r:int, inorder_l:int, inorder_r:int) -> TreeNode:

@@ -1,4 +1,4 @@
-from Tool.TreeNode import TreeNode
+from Tool.Python.TreeNode import TreeNode
 import sys
 
 class Solution:

@@ -3,7 +3,7 @@
 #
 # [112] 路径总和
 #
-from Tool.TreeNode import TreeNode
+from Tool.Python.TreeNode import TreeNode
 # @lc code=start
 # Definition for a binary tree node.
 # class TreeNode:

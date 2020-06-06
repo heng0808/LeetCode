@@ -16,7 +16,7 @@
 # 向右旋转 3 步: 0->1->2->NULL
 # 向右旋转 4 步: 2->0->1->NULL
 
-from Tool.ListNode import ListNode
+from Tool.Python.ListNode import ListNode
 
 class Solution:
     def rotateRight(self, head: ListNode, k: int) -> ListNode:

@@ -3,7 +3,7 @@
 #
 # [25] K 个一组翻转链表
 #
-from Tool.ListNode import ListNode
+from Tool.Python.ListNode import ListNode
 # @lc code=start
 # Definition for singly-linked list.
 # class ListNode:
