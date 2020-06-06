@@ -13,33 +13,31 @@ from Tool.Python.ListNode import ListNode
 
 class Solution:
     def partition(self, head: ListNode, x: int) -> ListNode:
-        small_queue = []
-        max_queue = []
-        node = head
-        while node:
-            if node.val < x:
-                small_queue.append(node)
+        pre_left, left, right = None, head, head
+        while right and right.next:
+            right = right.next
+        head, foot = None, None
+        while left != right:
+            leftNext = left.next
+            if left.val >= x:
+                left.next = None
+                if foot == None:
+                    right.next = left
+                    foot = left
+                    right = right.next
+                else:
+                    foot.next = left
+                    foot = foot.next
+                if pre_left != None:
+                    pre_left.next = leftNext
             else:
-                max_queue.append(node)
-            _node = node.next
-            node.next = None
-            node = _node
-        head = None
-        node = None
-        while len(small_queue) > 0:
-            _node = small_queue.pop(0)
-            if head == None:
-                head = _node
-            else:
-                node.next = _node
-            node = _node
-        while len(max_queue) > 0:
-            _node = max_queue.pop(0)
-            if head == None:
-                head = _node
-            else:
-                node.next = _node
-            node = _node
+                pre_left = left
+                if head == None:
+                    head = left
+            left = leftNext
+        if head == None:
+            head = left
         return head
+                
 # @lc code=end
-print(Solution().partition(ListNode([1,2,2]),3))
+print(Solution().partition(ListNode([1,2]),3))
