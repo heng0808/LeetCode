@@ -42,4 +42,4 @@ class Solution:
             node = _node
         return head
 # @lc code=end
-print(Solution().partition(ListNode.node([1,2,2]),3))
+print(Solution().partition(ListNode([1,2,2]),3))

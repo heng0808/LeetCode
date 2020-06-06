@@ -1,8 +1,13 @@
 class ListNode:
-    def __init__(self, x = None):
-        self.val = x
-        self.next = None
-
+    def __init__(self, vals:[int]):
+        if len(vals) == 0:
+            raise ValueError('vals is invalid')
+        self.val = vals[0]
+        try:
+            self.next = ListNode(vals[1:])
+        except:
+            self.next = None
+        
     def __str__(self):
         if self.next == None:
             return str(self.val)
@@ -12,16 +17,3 @@ class ListNode:
             des = des + " -> " + str(node.val)
             node = node.next
         return des
-
-    @staticmethod
-    def node(vals: []):
-        head = None
-        node = None
-        for val in vals:
-            if head == None:
-                head = ListNode(val)
-                node = head
-            else:
-                node.next = ListNode(val)
-                node = node.next
-        return head

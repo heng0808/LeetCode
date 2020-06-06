@@ -36,5 +36,5 @@ class Solution:
                 count = 0
         return root
 # @lc code=end
-print(Solution().reverseKGroup(ListNode.node([1,2,3,4,5]), 1))
+print(Solution().reverseKGroup(ListNode([1,2,3,4,5]), 1))
 

@@ -52,4 +52,4 @@ class Solution:
         return headNode
 
 # @lc code=end
-print(Solution().mergeTwoLists(ListNode.node([1,2,4]), ListNode.node([1,3,4])))
+print(Solution().mergeTwoLists(ListNode([1,2,4]), ListNode([1,3,4])))

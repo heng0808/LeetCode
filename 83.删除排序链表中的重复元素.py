@@ -21,5 +21,5 @@ class Solution:
                 node.next = node.next.next
         return head
 # @lc code=end
-print(Solution().deleteDuplicates(head=ListNode.node("1->1->2".split("->"))))
-print(Solution().deleteDuplicates(head=ListNode.node("1->1->2->3->3".split("->"))))
+print(Solution().deleteDuplicates(head=ListNode("1->1->2".split("->"))))
+print(Solution().deleteDuplicates(head=ListNode("1->1->2->3->3".split("->"))))

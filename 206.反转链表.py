@@ -46,4 +46,4 @@ class Solution:
         #         lastNode = node
         # return head
 # @lc code=end
-print(Solution().reverseList(ListNode.node([1,2,3,4,5])))
+print(Solution().reverseList(ListNode([1,2,3,4,5])))
