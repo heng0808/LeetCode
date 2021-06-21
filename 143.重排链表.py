@@ -34,5 +34,5 @@ class Solution:
                 nodes[left].next = None
         return head
 # @lc code=end
-print(Solution().reorderList(ListNode([1,2,3,4,5])))
+print(Solution().reorderList(ListNode.build([1,2,3,4,5])))
 

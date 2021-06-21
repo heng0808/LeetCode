@@ -15,4 +15,4 @@ class Solution:
                 node = nodeNext
         return pre
 
-print(Solution().reverseList(ListNode([1,2,3,4,5])))
+print(Solution().reverseList(ListNode.build([1,2,3,4,5])))

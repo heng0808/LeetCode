@@ -39,6 +39,6 @@ class Solution:
         return _head
 # @lc code=end
 print(Solution().deleteDuplicates(None))
-print(Solution().deleteDuplicates(ListNode([1,2,2])))
+print(Solution().deleteDuplicates(ListNode.build([1,2,2])))
 print(Solution().deleteDuplicates(ListNode("1->2->3->3->4->4->5".split("->"))))
 print(Solution().deleteDuplicates(ListNode("1->1->1->2->3".split("->"))))

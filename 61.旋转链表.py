@@ -40,7 +40,7 @@ class Solution:
         prevewNode.next = None
         return head
 
-print(Solution().rotateRight(ListNode([1,2,3,4,5]), 1))
-print(Solution().rotateRight(ListNode([0,1,2]), 3))
-print(Solution().rotateRight(ListNode([1,2]), 2))
+print(Solution().rotateRight(ListNode.build([1,2,3,4,5]), 1))
+print(Solution().rotateRight(ListNode.build([0,1,2]), 3))
+print(Solution().rotateRight(ListNode.build([1,2]), 2))
 # print(Solution().rotateRight(None, 0))

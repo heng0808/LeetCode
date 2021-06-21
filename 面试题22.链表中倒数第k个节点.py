@@ -14,4 +14,4 @@ class Solution:
             rightNode = rightNode.next
         return leftNode
 
-print(Solution().getKthFromEnd(ListNode([1]), 1))
+print(Solution().getKthFromEnd(ListNode.build([1]), 1))

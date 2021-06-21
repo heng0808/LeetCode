@@ -41,5 +41,5 @@ class Solution:
         return head
 # @lc code=end
 
-print(Solution().reverseBetween(ListNode([1,2,3,4,5]), 1, 8))
+print(Solution().reverseBetween(ListNode.build([1,2,3,4,5]), 1, 8))
 

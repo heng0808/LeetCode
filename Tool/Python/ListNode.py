@@ -1,13 +1,16 @@
+from typing import List
+
 class ListNode:
-    def __init__(self, vals:[int]):
+    @staticmethod
+    def build(vals:List):
         if len(vals) == 0:
-            raise ValueError('vals is invalid')
-        self.val = vals[0]
-        try:
-            self.next = ListNode(vals[1:])
-        except:
-            self.next = None
+            return None
+        return ListNode(val=vals[0], next=ListNode.build(vals[1:]))
         
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
     def __str__(self):
         if self.next == None:
             return str(self.val)
