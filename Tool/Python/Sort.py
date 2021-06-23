@@ -3,11 +3,11 @@ from typing import List
 
 SortTypeQuick = 1 # 快排序
 
-def sort(nums:List[int], sortType=SortTypeQuick):
+def sort(nums:List, sortType=SortTypeQuick):
     if sortType == SortTypeQuick:
         quick(nums)
 
-def quick(nums:List[int]):
+def quick(nums:List):
     stack = [(0, len(nums) - 1)] if len(nums) > 0 else []
     while len(stack) > 0:
         (start, end) = stack.pop()
