@@ -46,5 +46,5 @@ class Solution:
     #     return ans
 
 # @lc code=end
-print(Solution().postorderTraversal(TreeNode([1,None,2,None,None,3])))
+print(Solution().postorderTraversal(TreeNode.build([1,None,2,None,None,3])))
 

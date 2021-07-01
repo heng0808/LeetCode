@@ -16,7 +16,7 @@ from Tool.Python.TreeNode import TreeNode
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
         def tree(preorder_l:int, preorder_r:int, inorder_l:int, inorder_r:int) -> TreeNode:
-            node = TreeNode(preorder[preorder_l], None, None)
+            node = TreeNode.build(preorder[preorder_l], None, None)
             inorder_root_index = inorder_table[node.val]
             inorder_left_range = [inorder_l, inorder_root_index - 1]
             inorder_right_range = [inorder_root_index + 1, inorder_r]

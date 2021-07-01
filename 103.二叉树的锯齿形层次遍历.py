@@ -36,6 +36,6 @@ class Solution:
             level += 1
         return ans
 # @lc code=end
-tree = TreeNode([3,9,20,None,None,15,7])
+tree = TreeNode.build([3,9,20,None,None,15,7])
 print(Solution().zigzagLevelOrder(tree))
 

@@ -42,4 +42,4 @@ class Solution:
         return True
 
 # @lc code=end
-print(Solution().isSymmetric(TreeNode([1,2,2,None,3,None,3])))
+print(Solution().isSymmetric(TreeNode.build([1,2,2,None,3,None,3])))

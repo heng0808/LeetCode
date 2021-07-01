@@ -31,6 +31,6 @@ class Solution:
         nextNode([], root, 0)
         return ans
 # @lc code=end
-root = TreeNode([5,4,8,11,None,13,4,7,2,None,None,None,None,5,1])
+root = TreeNode.build([5,4,8,11,None,13,4,7,2,None,None,None,None,5,1])
 print(Solution().pathSum(root, 22))
 

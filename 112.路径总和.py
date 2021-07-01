@@ -25,9 +25,9 @@ class Solution:
                 
 # @lc code=end
 
-# root = TreeNode([5,4,8,11,None,13,4,7,2,None,None,None,1])
-# root = TreeNode([1,2,None,3,None,4,None,5])
-root = TreeNode([1])
+# root = TreeNode.build([5,4,8,11,None,13,4,7,2,None,None,None,1])
+# root = TreeNode.build([1,2,None,3,None,4,None,5])
+root = TreeNode.build([1])
 print(Solution().hasPathSum(root, 1))
 
 #         5

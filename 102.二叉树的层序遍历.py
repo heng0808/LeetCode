@@ -32,6 +32,6 @@ class Solution:
             nextLevelNodes = _nextLevelNodes
         return arr
 # @lc code=end
-root = TreeNode([3,9,20,None,None,15,7])
+root = TreeNode.build([3,9,20,None,None,15,7])
 print(Solution().levelOrder(root))
 

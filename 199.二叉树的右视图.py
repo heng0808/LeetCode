@@ -30,5 +30,5 @@ class Solution:
             levelNode = _levelNode
         return ans
 # @lc code=end
-tree = TreeNode([1,2])
+tree = TreeNode.build([1,2])
 print(Solution().rightSideView(tree))
